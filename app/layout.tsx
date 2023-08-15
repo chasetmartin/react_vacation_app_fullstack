@@ -5,6 +5,7 @@ import { Nunito } from 'next/font/google';
 import Navbar from './components/navbar/navbar';
 import ClientOnly from './components/clientOnly';
 import RegisterModal from './components/modals/RegisterModal';
+import ToasterProvider from './providers/toasterProvider';
 
 export const metadata: Metadata = {
   title: 'Reactive Vacations',
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
+          <ToasterProvider />
           <RegisterModal />
           <Navbar />
         </ClientOnly>
