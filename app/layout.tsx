@@ -4,7 +4,7 @@ import { Nunito } from 'next/font/google';
 
 import Navbar from './components/navbar/navbar';
 import ClientOnly from './components/clientOnly';
-import Modal from './components/modals/modal';
+import RegisterModal from './components/modals/RegisterModal';
 
 export const metadata: Metadata = {
   title: 'Reactive Vacations',
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          <Modal title='Hello World' isOpen />
+          <RegisterModal />
           <Navbar />
         </ClientOnly>
         {children}
