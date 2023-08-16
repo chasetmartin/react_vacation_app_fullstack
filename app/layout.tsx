@@ -8,6 +8,7 @@ import RegisterModal from './components/modals/RegisterModal';
 import ToasterProvider from './providers/toasterProvider';
 import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
+import RentModal from './components/modals/RentModal';
 
 export const metadata: Metadata = {
   title: 'Reactive Vacations',
@@ -31,6 +32,7 @@ export default async function RootLayout({
           <ToasterProvider />
           <LoginModal />
           <RegisterModal />
+          <RentModal />
           <Navbar currentUser={currentUser}/>
         </ClientOnly>
         {children}
